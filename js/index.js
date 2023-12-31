@@ -3,7 +3,7 @@
 let days = ["Sunday", "Monday", "Tuesday","Thursday","Wednsday","Tuseday","Friday"]
 
 
-async function getWeather (city = "Veladores"){
+async function getWeather (city = "Alex"){
     let data = await fetch (`https://api.weatherapi.com/v1/forecast.json?key=14c797d8ea394bff8e315301233112&q=${city}&days=3`)
     let details = await data.json()
     document.getElementById("loader").classList.replace("d-flex","d-none")
@@ -72,7 +72,6 @@ function displayThirdDay(result){
     document.getElementById("min-temp3").innerText =  result.forecast.forecastday[2].day.mintemp_c
     document.querySelector("#text3").innerText = result.forecast.forecastday[2].day.condition.text
 
-    console.log(result.forecast.forecastday[2].day.maxtemp_c);
 }
 
 
@@ -91,4 +90,5 @@ document.addEventListener("keypress",function(e){
     }
 })
 
-setTimeout(getWeather,1000)
+// setTimeout(getWeather,1000)
+getWeather()
