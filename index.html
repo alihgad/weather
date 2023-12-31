@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="position-relative">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+<body>
+
+  <nav
+    class="navbar navbar-expand-md navbar-light py-5 bg-blue"
+  >
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="#">
+        <img class="col-4 pe-2 " src="./imges/cloud.png" alt="">
+        Weather
+      </a>
+
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse " id="collapsibleNavId">
+        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+          <li class="nav-item px-4">
+            <a class="nav-link active text-white " href="#" aria-current="page"
+              >Home
+              <span class="visually-hidden">(current)</span></a
+            >
+          </li>
+
+          <li class="nav-item px-4">
+            <a class="nav-link text-white " href="#">News</a>
+          </li>
+
+          <li class="nav-item px-4">
+            <a class="nav-link text-white " href="#">Live camera</a>
+          </li>
+
+          <li class="nav-item px-4">
+            <a class="nav-link text-white " href="#">Photos</a>
+          </li>
+
+          <li class="nav-item px-4">
+            <a class="nav-link text-white " href="#">Contact</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class=" body bg-blue ">
+      <div class="container pt-5 pb-5">
+
+        <div class=" position-relative d-flex mb-5  ">
+          <input type="text" class="form-control rounded-5 p-3 " placeholder="Find your location ..." aria-label="Find your location ..." aria-describedby="button-addon2">
+          <button class="btn btn-primary rounded-5 position-absolute end-0 p-2 mx-3 my-2 px-4 " type="button" id="button-addon2">Find</button>
+        </div>
+        
+        <div class="cards row row-cols-lg-3 rounded-3 overflow-hidden">
+          <div class="card p-0 text-white border-0 ">
+            <div class="card-header bg-card rounded-0">
+              day
+            </div>
+            <div class="card-body bg-sec-blue">
+              20C
+            </div>
+          </div>
+          <div class="card p-0 text-white border-0">
+            <div class="card-header bg-blue rounded-0">
+              day
+            </div>
+            <div class="card-body bg-card">
+              20C
+            </div>
+          </div>
+          <div class="card p-0 text-white border-0">
+            <div class="card-header bg-card rounded-0">
+              day
+            </div>
+            <div class="card-body bg-sec-blue ">
+              20C
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="bg-sec-blue py-5">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8 position-relative d-flex mb-3  ">
+          <input type="text" class="form-control rounded-5 p-3 " placeholder="Enter Your email to subscripe .." aria-label="Enter Your email to subscripe .." aria-describedby="button-addon2">
+          <button class="btn btn-primary rounded-5 position-absolute end-0 p-2 mx-3 my-2 px-4 " type="button" id="button-addon2">Subscripe</button>
+          </div>
+
+          <div class="social col-md-4 d-flex align-items-center container ">
+            <div class="row row-cols-4 translate-middle-y ms-auto pe-md-5">
+              <div class="icon ">
+                <a href="" class=" bg-blue rounded-circle py-2">
+                  <i class="fa-brands fa-facebook-f fs-5"></i>
+                </a>
+              </div>
+              
+              <div class="icon ">
+                <a href="" class=" bg-blue rounded-circle py-2">
+                  <i class="fa-brands fa-twitter fs-5"></i>
+                </a>
+              </div>
+              
+              <div class="icon ">
+                <a href="" class=" bg-blue rounded-circle py-2">
+                  <i class="fa-brands fa-google-plus-g fs-5"></i>
+                </a>
+              </div>
+              
+              <div class="icon ">
+                <a href="" class=" bg-blue rounded-circle py-2">
+                  <i class="fa-brands fa-p fs-5"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <small class="text-white">Copyright 2014 Company name. Designed by Themezy. All rights reserved</small>
+        </div>  
+      </div>
+    </footer>
+
+  </main>
+  
+    
+
+
+  <script src="./js/index.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

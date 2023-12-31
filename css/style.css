@@ -1,0 +1,51 @@
+.bg-blue{
+    background-color: #1E202B !important;
+}
+
+.bg-sec-blue{
+    background-color: #262936 !important;
+}
+
+.bg-card{
+    background-color: #2f303d !important;
+
+}
+
+.bg-thi-blue{
+    background-color: #1E202B !important;
+}
+
+.icon i {
+    width: 45px;
+    padding-left: 15px;    
+}
+
+.body{
+    background-image:url(../imges/back\ ground.png);
+    /* background-position: center center  ; */
+    background-repeat: no-repeat;
+}
+
+input{
+    background-color: #1E202B !important;
+    border: none !important;
+    color: white !important;
+}
+
+::placeholder{
+    color: #eee !important;
+    opacity: 0.5 !important;
+}
+
+.card-body{
+    height: 500px;
+}
+
+
+@media screen and (max-width : 768px) {
+    .social .row {
+        margin: 20px 0 !important;
+
+    }
+}
+
