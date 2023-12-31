@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="position-relative">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/all.min.css">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
-<body>
+<body >
 
   <nav
     class="navbar navbar-expand-md navbar-light py-5 bg-blue"
@@ -67,35 +67,90 @@
       <div class="container pt-5 pb-5">
 
         <div class=" position-relative d-flex mb-5  ">
-          <input type="text" class="form-control rounded-5 p-3 " placeholder="Find your location ..." aria-label="Find your location ..." aria-describedby="button-addon2">
+          <input id="find" type="text" class="form-control rounded-5 p-3 " placeholder="Find your location ..." aria-label="Find your location ..." aria-describedby="button-addon2">
           <button class="btn btn-primary rounded-5 position-absolute end-0 p-2 mx-3 my-2 px-4 " type="button" id="button-addon2">Find</button>
         </div>
         
         <div class="cards row row-cols-lg-3 rounded-3 overflow-hidden">
+
           <div class="card p-0 text-white border-0 ">
-            <div class="card-header bg-card rounded-0">
-              day
+            <div class="card-header bg-card rounded-0 d-flex justify-content-between">
+              <span id="day" class=""></span>
+              <span id="month" class=""></span>
             </div>
+
             <div class="card-body bg-sec-blue">
-              20C
+              <p id="location" class="fs-4 lead"></p>
+              <div class="condation row py-3">
+                <div class="temp col-8 fw-bolder display-2 ">
+                  <span id="temp"></span>
+                  <sup>o</sup>
+                  <span>C</span>
+                </div>
+                <div class="col-4">
+                  <img class="w-100" src="" alt="" id="icon">
+                </div>
+              </div>
+              <small class="d-block text-primary mb-2 fs-6" id="text"></small>
+              <div class="details">
+                <div class="row row-cols-4 text-secondary fs-4 ">
+                  <div class="col"><i class="fa-solid fa-umbrella"></i> <span id="uv"></span>%</div>
+                  <div class="col"><i class="fa-solid fa-wind"></i> <span id="wind"></span></div>
+                  <div class="col"><i class="fa-regular fa-compass"></i><span class="fs-5 px-1" id="derction"></span></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card p-0 text-white border-0">
-            <div class="card-header bg-blue rounded-0">
-              day
+
+
+          <div class="card text-center p-0 text-white border-0">
+            <div id="day2" class="card-header bg-sec-blue rounded-0 ">
             </div>
-            <div class="card-body bg-card">
-              20C
+            <div class="card-body bg-card ">
+              <div class="icon  mt-5" >
+                <img id="icon2" src="" alt="">
+              </div>
+              <div class="temps">
+                <div  class="fw-bolder fs-2">
+                  <span id="max-temp"></span>
+                  <sup>o</sup>
+                  <span>C</span>
+                </div>
+                <div >
+                  <span id="min-temp"></span>
+                  <sup>o</sup>
+                </div>
+              </div>
+              <p id="text1" class="text-primary my-3"></p>
             </div>
           </div>
-          <div class="card p-0 text-white border-0">
-            <div class="card-header bg-card rounded-0">
-              day
+
+
+
+          <div class="card p-0 text-white border-0 text-center">
+
+            <div id="day3" class="card-header bg-card rounded-0 ">
             </div>
             <div class="card-body bg-sec-blue ">
-              20C
+              <div class="icon  mt-5" >
+                <img id="icon3" src="" alt="">
+              </div>
+              <div class="temps">
+                <div  class="fw-bolder fs-2">
+                  <span id="max-temp3"></span>
+                  <sup>o</sup>
+                  <span>C</span>
+                </div>
+                <div >
+                  <span id="min-temp3"></span>
+                  <sup>o</sup>
+                </div>
+              </div>
+              <p id="text3" class="text-primary my-3"></p>
             </div>
+
           </div>
+
         </div>
 
       </div>
@@ -146,7 +201,9 @@
   
     
 
-
+  <div id="loader" class=" text-white  bg-dark position-absolute start-0 end-0 top-0 bottom-0 d-flex justify-content-center align-items-center ">
+    <i class="fa-solid fa-spinner fa-2xl fs-1  fa-spin"></i>
+  </div>
   <script src="./js/index.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
