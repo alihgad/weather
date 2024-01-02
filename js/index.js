@@ -90,4 +90,4 @@ document.addEventListener("keypress",function(e){
     }
 })
 
-setTimeout(getWeather,1000)
+setTimeout(getWeather,1)
