@@ -66,12 +66,14 @@
 
     <section class=" body bg-blue ">
       <div class="container pt-5 pb-5">
-
-        <div class=" position-relative d-flex mb-5  ">
+        
+        <div class=" position-relative d-flex   ">
           <input id="find" type="text" class="form-control rounded-5 p-3 " placeholder="Find your location ..." aria-label="Find your location ..." aria-describedby="button-addon2">
           <button class="btn btn-primary rounded-5 position-absolute end-0 p-2 mx-3 my-2 px-4 " type="button" id="button-addon2">Find</button>
         </div>
-        
+        <div id="wrong" class="ps-2 mb-5 opacity-0 ">
+          <small class=" text-white fw-bold  fs-4 ">Search Failed , Wrong city</small>
+        </div>                
         <div class="cards row row-cols-lg-3 rounded-3 overflow-hidden">
 
           <div class="card p-0 text-white border-0 ">

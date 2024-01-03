@@ -5,11 +5,14 @@ let days = ["Sunday", "Monday", "Tuesday","Thursday","Wednsday","Tuseday","Frida
 
 async function getWeather (city = "Alex"){
     let data = await fetch (`https://api.weatherapi.com/v1/forecast.json?key=14c797d8ea394bff8e315301233112&q=${city}&days=3`)
-    let details = await data.json()
-    document.getElementById("loader").classList.replace("d-flex","d-none")
-    displayFirstDay(details)
-
-   
+    if(data.status == 200){
+        document.getElementById("wrong").classList.replace("opacity-100","opacity-0")
+        let details = await data.json()
+        document.getElementById("loader").classList.replace("d-flex","d-none")
+        displayFirstDay(details)
+    }else{
+        document.getElementById("wrong").classList.replace("opacity-0","opacity-100")
+    }
 }
 
 function displayFirstDay(result){ 
