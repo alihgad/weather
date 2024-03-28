@@ -1,6 +1,6 @@
 "use strict";
 
-let days = ["Sunday", "Monday", "Tuesday","Thursday","Wednsday","Tuseday","Friday"]
+let days = ["Saturday","Sunday", "Monday","Thursday","Wednsday","Tuseday","Friday"]
 
 
 async function getWeather (city = "Alex"){
@@ -46,7 +46,8 @@ function displayFirstDay(result){
     document.getElementById("text").innerText = text
     document.getElementById("location").innerText = result.location.name
     document.querySelector("#temp").innerText = result.current.temp_c
-    document.querySelector("#day").innerText = days[date.getDay()]  
+    document.querySelector("#day").innerText = days[date.getDay()+1]  
+    console.log(date.getDay());
     document.querySelector('#month').innerText =  currentMonth
     document.querySelector("#uv").innerText = result.current.uv 
     document.querySelector("#wind").innerText = result.current.wind_kph
@@ -56,7 +57,7 @@ function displayFirstDay(result){
 }
 
 function displaySecondDay(result) {
-    const day = new Date(result.forecast.forecastday[1].date); 
+    const day = new Date(result.forecast.forecastday[2].date); 
     document.getElementById("day2").innerText = days[day.getDay()]
     document.querySelector("#icon2").setAttribute("src",result.forecast.forecastday[1].day.condition.icon)
     document.getElementById("max-temp").innerText =  result.forecast.forecastday[1].day.maxtemp_c
@@ -69,7 +70,7 @@ function displaySecondDay(result) {
 
 function displayThirdDay(result){
     const day = new Date(result.forecast.forecastday[2].date); 
-    document.getElementById("day3").innerText = days[day.getDay()]
+    document.getElementById("day3").innerText = days[day.getDay()+1]
     document.querySelector("#icon3").setAttribute("src",result.forecast.forecastday[2].day.condition.icon)
     document.getElementById("max-temp3").innerText =  result.forecast.forecastday[2].day.maxtemp_c
     document.getElementById("min-temp3").innerText =  result.forecast.forecastday[2].day.mintemp_c
